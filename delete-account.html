@@ -35,6 +35,7 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 
 <article id="zh" lang="zh-CN">
 <h1>删除喵喵刷题 / MeowQuiz 账号</h1>
+<p class="muted">开发者：Meow_Studio</p>
 <p>你可以随时删除你的喵喵刷题账号。删除后，账号和账号里的数据都会删掉，不能恢复。</p>
 
 <div class="warn">
@@ -46,9 +47,9 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 <li>打开喵喵刷题，登录要删除的账号。</li>
 <li>点底部的“我的”，再点“我的账号”。</li>
 <li>点“删除账号”。</li>
-<li>看清提示，重新输入密码确认。</li>
+<li>看清提示，重新输入密码，点“永久删除账号”。</li>
 </ol>
-<p>确认后账号立即删除，你会被退出登录。</p>
+<p>确认后会立即开始删除，通常几秒内完成，完成后 App 显示“账号已删除”并退出登录。如果当时有正在进行的 AI 解题或导入整理，App 会提示还没删完：等它结束后再点一次“永久删除账号”即可完成。删完以后这个账号就登录不了了；如果你不确定有没有删完，可以按方法二发邮件给我们核对。</p>
 
 <h2>方法二：没装 App，发邮件申请</h2>
 <p>如果你已经卸载了 App，或者登录不了，可以发邮件申请：</p>
@@ -64,11 +65,11 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 
 <h2>会删除什么</h2>
 <ul>
-<li>账号本身：邮箱、密码、昵称和所有登录记录。删除后所有设备都会退出登录，这个账号再也登录不了。</li>
+<li>账号本身：邮箱、密码（我们只存加密散列）、昵称、所有登录会话和登录日志。删除后所有设备都会退出登录，这个账号再也登录不了。</li>
 <li>余额：分钟余额、导入积分。</li>
 <li>和你账号关联的记录：兑换记录、计时记录、每次问 AI 的用量记录和每天的用量汇总。</li>
 </ul>
-<p>题目文字和截图本来就不存在我们的服务器上；AI 答案和导入整理结果在服务器上只留 15 分钟。</p>
+<p>你发出的题目文字和截图本来就不存在我们的服务器上。AI 答案和云端整理导入时暂存的结果只留 15 分钟；删除时如果还在，也会一起删除。原文件从来不上传。</p>
 
 <h2>会保留什么</h2>
 <p>为了对账和防止滥用，删除时我们会把账务数字去掉身份后留下。留下的内容<strong>不含你的邮箱、账号编号、题目和答案</strong>，没法再对应到你：</p>
@@ -79,6 +80,11 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 <li>运营统计：本来就是按天汇总的人数、时长和用量，不含个人信息。</li>
 </ul>
 <p>这些去掉身份的记录会长期保存。</p>
+<p>另外有两类记录不在我们的数据库里，删除账号后会按各自的规则自动删除：</p>
+<ul>
+<li>服务器访问日志（可能含 IP 地址）：由 Supabase 平台记录，一般不超过 7 天自动删除。</li>
+<li>邮件服务商 Resend 的发送记录（含你的邮箱）：保存一段时间后按 Resend 的规则自动删除。</li>
+</ul>
 
 <h2>不在我们服务器上的数据</h2>
 <ul>
@@ -94,6 +100,7 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 
 <article id="en" lang="en">
 <h1>Delete your MeowQuiz (喵喵刷题) account</h1>
+<p class="muted">Developer: Meow_Studio</p>
 <p>You can delete your MeowQuiz account at any time. Deleting it removes the account and its data, and cannot be undone.</p>
 
 <div class="warn">
@@ -105,9 +112,9 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 <li>Open MeowQuiz and sign in to the account you want to delete.</li>
 <li>Tap “Me” (我的) at the bottom, then “My account” (我的账号).</li>
 <li>Tap “Delete account” (删除账号).</li>
-<li>Read the notice and enter your password again to confirm.</li>
+<li>Read the notice, enter your password again and tap “Delete account permanently” (永久删除账号).</li>
 </ol>
-<p>The account is deleted immediately and you are signed out.</p>
+<p>Deletion starts as soon as you confirm and usually finishes within a few seconds; the app then shows “Account deleted” (账号已删除) and signs you out. If an AI answer or import sorting is still running at that moment, the app tells you deletion is not finished yet: wait for it to end, then tap “Delete account permanently” (永久删除账号) again to finish. Once deleted, the account can no longer sign in. If you are not sure whether it finished, email us as in option 2 and we will check.</p>
 
 <h2>Option 2: no app? Ask by email</h2>
 <p>If you have uninstalled the app or cannot sign in, email us:</p>
@@ -123,11 +130,11 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 
 <h2>What we delete</h2>
 <ul>
-<li>The account itself: email address, password, nickname and all login sessions. You are signed out on every device and the account can no longer sign in.</li>
+<li>The account itself: email address, password (we only hold an encrypted hash), nickname, all login sessions and login logs. You are signed out on every device and the account can no longer sign in.</li>
 <li>Your balance: minutes and import credits.</li>
 <li>Records linked to your account: redemptions, timed sessions, per-request AI usage and daily usage summaries.</li>
 </ul>
-<p>Question text and screenshots are never stored on our server, and AI answers and import results stay there for only 15 minutes.</p>
+<p>The question text and screenshots you send are never stored on our server. AI answers and results held during cloud import sorting stay for only 15 minutes, and anything still there is deleted with your account. Original files are never uploaded.</p>
 
 <h2>What we keep</h2>
 <p>For bookkeeping and abuse prevention, we keep the accounting figures with your identity removed. What remains <strong>does not include your email, account ID, questions or answers</strong>, and can no longer be linked to you:</p>
@@ -138,6 +145,11 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 <li>Service statistics: daily totals of users, time and usage, which never contained personal information.</li>
 </ul>
 <p>These de-identified records are kept long term.</p>
+<p>Two other kinds of records are not in our database and are deleted automatically under their own rules after your account is deleted:</p>
+<ul>
+<li>Server access logs (which may include IP addresses): recorded by Supabase and deleted automatically, normally within 7 days.</li>
+<li>Sending records at our email provider Resend (including your email address): kept for a period, then deleted automatically under Resend’s rules.</li>
+</ul>
 
 <h2>Data not on our server</h2>
 <ul>
