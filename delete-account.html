@@ -65,7 +65,7 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 
 <h2>会删除什么</h2>
 <ul>
-<li>账号本身：邮箱、密码（我们只存加密散列）、昵称、所有登录会话和登录日志。删除后所有设备都会退出登录，这个账号再也登录不了。</li>
+<li>账号本身：邮箱、密码（我们只存加密散列）、昵称、所有登录会话，以及登录服务数据库里的登录记录。删除后所有设备都会退出登录，这个账号再也登录不了。</li>
 <li>余额：分钟余额、导入积分。</li>
 <li>和你账号关联的记录：兑换记录、计时记录、每次问 AI 的用量记录和每天的用量汇总。</li>
 </ul>
@@ -82,7 +82,7 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 <p>这些去掉身份的记录会长期保存。</p>
 <p>另外有两类记录不在我们的数据库里，删除账号后会按各自的规则自动删除：</p>
 <ul>
-<li>服务器访问日志（可能含 IP 地址）：由 Supabase 平台记录，一般不超过 7 天自动删除。</li>
+<li>服务器访问日志（可能含 IP 地址和账号编号）：由 Supabase 平台记录，一般不超过 7 天自动删除。</li>
 <li>邮件服务商 Resend 的发送记录（含你的邮箱）：保存一段时间后按 Resend 的规则自动删除。</li>
 </ul>
 
@@ -130,7 +130,7 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 
 <h2>What we delete</h2>
 <ul>
-<li>The account itself: email address, password (we only hold an encrypted hash), nickname, all login sessions and login logs. You are signed out on every device and the account can no longer sign in.</li>
+<li>The account itself: email address, password (we only hold an encrypted hash), nickname, all login sessions, and the sign-in records in the sign-in service database. You are signed out on every device and the account can no longer sign in.</li>
 <li>Your balance: minutes and import credits.</li>
 <li>Records linked to your account: redemptions, timed sessions, per-request AI usage and daily usage summaries.</li>
 </ul>
@@ -147,7 +147,7 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 <p>These de-identified records are kept long term.</p>
 <p>Two other kinds of records are not in our database and are deleted automatically under their own rules after your account is deleted:</p>
 <ul>
-<li>Server access logs (which may include IP addresses): recorded by Supabase and deleted automatically, normally within 7 days.</li>
+<li>Server access logs (which may include IP addresses and account IDs): recorded by Supabase and deleted automatically, normally within 7 days.</li>
 <li>Sending records at our email provider Resend (including your email address): kept for a period, then deleted automatically under Resend’s rules.</li>
 </ul>
 
