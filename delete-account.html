@@ -36,61 +36,31 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 <article id="zh" lang="zh-CN">
 <h1>删除喵喵刷题 / MeowQuiz 账号</h1>
 <p class="muted">开发者：Meow_Studio</p>
-<p>你可以随时删除你的喵喵刷题账号。删除后，账号和账号里的数据都会删掉，不能恢复。</p>
+<p>你可以随时删除喵喵刷题账号。删除后不能恢复。</p>
 
 <div class="warn">
-<p><strong>删除前请注意：</strong>账号里没用完的分钟和导入积分会作废，不能恢复，也不会退款或转到别的账号。通过 Google Play 购买的退款按 Google Play 的规则处理，我们不另外退款。</p>
+<p><strong>请注意：</strong>没用完的分钟和导入积分会作废，不能恢复、不退款，也不能转到别的账号。Google Play 购买的退款按 Google Play 的规则处理，我们不另外退款。</p>
 </div>
 
-<h2>方法一：在 App 里删除（最快）</h2>
+<h2>在 App 里删除</h2>
 <ol>
 <li>打开喵喵刷题，登录要删除的账号。</li>
-<li>点底部的“我的”，再点“我的账号”。</li>
-<li>点“删除账号”。</li>
-<li>看清提示，重新输入密码，点“永久删除账号”。</li>
+<li>点“我的 → 我的账号 → 删除账号”。</li>
+<li>输入密码，点“永久删除账号”。</li>
 </ol>
-<p>确认后会立即开始删除，通常几秒内完成，完成后 App 显示“账号已删除”并退出登录。如果当时有正在进行的 AI 解题或导入整理，App 会提示还没删完：等它结束后再点一次“永久删除账号”即可完成。删完以后这个账号就登录不了了；如果你不确定有没有删完，可以按方法二发邮件给我们核对。</p>
+<p>通常几秒内删完，App 会显示“账号已删除”并退出登录。如果当时还有 AI 解题或导入整理在进行，App 会提示还没删完：等它结束后再点一次“永久删除账号”即可。</p>
 
-<h2>方法二：没装 App，发邮件申请</h2>
-<p>如果你已经卸载了 App，或者登录不了，可以发邮件申请：</p>
-<div class="box">
-<ul>
-<li>收件人：<a href="mailto:meowquizofficial@gmail.com?subject=%E5%88%A0%E9%99%A4%E8%B4%A6%E5%8F%B7">meowquizofficial@gmail.com</a></li>
-<li>用你<strong>注册喵喵刷题时用的邮箱</strong>发送，这样我们能确认是你本人。</li>
-<li>邮件标题写“删除账号”。</li>
-<li><strong>不要</strong>在邮件里写密码或验证码。我们不会向你要这些。</li>
-</ul>
-</div>
-<p>我们会在 7 天内回复。确认是账号本人后，在 30 天内删除完毕，并发邮件告诉你。如果需要进一步确认身份，我们会在回复里说明怎么做。</p>
+<h2>没装 App：发邮件申请</h2>
+<p>用你注册时的邮箱发邮件到 <a href="mailto:meowquizofficial@gmail.com?subject=%E5%88%A0%E9%99%A4%E8%B4%A6%E5%8F%B7">meowquizofficial@gmail.com</a>，标题写“删除账号”。<strong>不要</strong>写密码或验证码。我们 7 天内回复，确认是本人后 30 天内删完，并发邮件告诉你。</p>
 
 <h2>会删除什么</h2>
-<ul>
-<li>账号本身：邮箱、密码（我们只存加密散列）、昵称、所有登录会话，以及登录服务数据库里的登录记录。删除后所有设备都会退出登录，这个账号再也登录不了。</li>
-<li>余额：分钟余额、导入积分。</li>
-<li>和你账号关联的记录：兑换记录、计时记录、每次问 AI 的用量记录和每天的用量汇总。</li>
-</ul>
-<p>你发出的题目文字和截图本来就不存在我们的服务器上。AI 答案和云端整理导入时暂存的结果只留 15 分钟；删除时如果还在，也会一起删除。原文件从来不上传。</p>
+<p>账号（邮箱、密码、昵称、登录会话和登录记录）、余额，以及兑换、计时和 AI 用量记录。删除后所有设备都会退出登录。服务器上暂存的 AI 答案和整理结果也会一起删除。</p>
 
 <h2>会保留什么</h2>
-<p>为了对账和防止滥用，删除时我们会把账务数字去掉身份后留下。留下的内容<strong>不含你的邮箱、账号编号、题目和答案</strong>，没法再对应到你：</p>
 <ul>
-<li>用量账：日期、用的哪个 AI 模型、用量数字（AI 处理了多少内容）、扣了多少；如果某次请求当时还在等 AI 服务商的账单核对，会留下服务商那边的请求编号，只用来核对费用。</li>
-<li>余额变动账：日期、变动来源（例如兑换、计时、导入）、增减了多少分钟和积分。</li>
-<li>用过的兑换码：留下“这个码已经用过”的标记，防止被再次兑换，但去掉和你的关联。</li>
-<li>运营统计：本来就是按天汇总的人数、时长和用量，不含个人信息。</li>
-</ul>
-<p>这些去掉身份的记录会长期保存。</p>
-<p>另外有两类记录不在我们的数据库里，删除账号后会按各自的规则自动删除：</p>
-<ul>
-<li>服务器访问日志（可能含 IP 地址和账号编号）：由 Supabase 平台记录，一般不超过 7 天自动删除。</li>
-<li>邮件服务商 Resend 的发送记录（含你的邮箱）：保存一段时间后按 Resend 的规则自动删除。</li>
-</ul>
-
-<h2>不在我们服务器上的数据</h2>
-<ul>
-<li><strong>你手机上的题库和做题记录</strong>只存在你手机里。删除账号不会自动删掉它们；卸载 App 或在系统设置里清除喵喵刷题的应用数据，就会删除。</li>
-<li><strong>AI 服务商</strong>（Anthropic、OpenAI）收到的题目内容，我们没有附上你的邮箱或账号编号，按服务商各自的数据政策保存和删除。</li>
-<li><strong>Google Play 订单</strong>由 Google 保存，按 Google 的规则处理。</li>
+<li>不含你邮箱和账号编号的账务记录和统计（例如哪天用了多少、扣了多少），长期保存，用于对账和防止滥用。</li>
+<li>服务器访问日志（可能含 IP 地址和账号编号）一般不超过 7 天自动删除；邮件服务商的发送记录按它的规则自动删除。</li>
+<li>你手机上的题库和做题记录不会自动删除，卸载 App 或清除应用数据即可删掉。</li>
 </ul>
 
 <p>更多说明见<a href="privacy.html">隐私政策</a>。有疑问请发邮件到 <a href="mailto:meowquizofficial@gmail.com">meowquizofficial@gmail.com</a>。</p>
@@ -101,61 +71,31 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 <article id="en" lang="en">
 <h1>Delete your MeowQuiz (喵喵刷题) account</h1>
 <p class="muted">Developer: Meow_Studio</p>
-<p>You can delete your MeowQuiz account at any time. Deleting it removes the account and its data, and cannot be undone.</p>
+<p>You can delete your MeowQuiz account at any time. Deletion cannot be undone.</p>
 
 <div class="warn">
-<p><strong>Before you delete:</strong> any unused minutes and import credits on the account are forfeited. They cannot be restored, refunded or moved to another account. Refunds for Google Play purchases follow Google Play’s rules; we do not issue separate refunds.</p>
+<p><strong>Please note:</strong> unused minutes and import credits are forfeited. They cannot be restored, refunded or moved to another account. Refunds for Google Play purchases follow Google Play’s rules; we do not issue separate refunds.</p>
 </div>
 
-<h2>Option 1: delete in the app (fastest)</h2>
+<h2>Delete in the app</h2>
 <ol>
 <li>Open MeowQuiz and sign in to the account you want to delete.</li>
-<li>Tap “Me” (我的) at the bottom, then “My account” (我的账号).</li>
-<li>Tap “Delete account” (删除账号).</li>
-<li>Read the notice, enter your password again and tap “Delete account permanently” (永久删除账号).</li>
+<li>Tap “Me → My account → Delete account” (我的 → 我的账号 → 删除账号).</li>
+<li>Enter your password and tap “Delete account permanently” (永久删除账号).</li>
 </ol>
-<p>Deletion starts as soon as you confirm and usually finishes within a few seconds; the app then shows “Account deleted” (账号已删除) and signs you out. If an AI answer or import sorting is still running at that moment, the app tells you deletion is not finished yet: wait for it to end, then tap “Delete account permanently” (永久删除账号) again to finish. Once deleted, the account can no longer sign in. If you are not sure whether it finished, email us as in option 2 and we will check.</p>
+<p>It usually finishes within a few seconds; the app shows “Account deleted” (账号已删除) and signs you out. If an AI answer or import sorting is still running, the app says deletion is not finished yet: wait for it to end, then tap “Delete account permanently” again.</p>
 
-<h2>Option 2: no app? Ask by email</h2>
-<p>If you have uninstalled the app or cannot sign in, email us:</p>
-<div class="box">
-<ul>
-<li>To: <a href="mailto:meowquizofficial@gmail.com?subject=Delete%20account">meowquizofficial@gmail.com</a></li>
-<li>Send it from <strong>the email address you registered with</strong>, so we can confirm it is you.</li>
-<li>Subject: “Delete account” (删除账号).</li>
-<li><strong>Do not</strong> include your password or any sign-in code. We will never ask for them.</li>
-</ul>
-</div>
-<p>We reply within 7 days. Once we confirm you own the account, we finish the deletion within 30 days and let you know by email. If we need more to confirm your identity, our reply will explain how.</p>
+<h2>No app? Ask by email</h2>
+<p>Email <a href="mailto:meowquizofficial@gmail.com?subject=Delete%20account">meowquizofficial@gmail.com</a> from the address you registered with, with the subject “Delete account”. <strong>Do not</strong> include your password or any sign-in code. We reply within 7 days and, once we confirm it is you, finish the deletion within 30 days and let you know by email.</p>
 
 <h2>What we delete</h2>
-<ul>
-<li>The account itself: email address, password (we only hold an encrypted hash), nickname, all login sessions, and the sign-in records in the sign-in service database. You are signed out on every device and the account can no longer sign in.</li>
-<li>Your balance: minutes and import credits.</li>
-<li>Records linked to your account: redemptions, timed sessions, per-request AI usage and daily usage summaries.</li>
-</ul>
-<p>The question text and screenshots you send are never stored on our server. AI answers and results held during cloud import sorting stay for only 15 minutes, and anything still there is deleted with your account. Original files are never uploaded.</p>
+<p>Your account (email, password, nickname, login sessions and login records), your balance, and your redemption, timing and AI usage records. You are signed out on every device. Any AI answers or import results still held on our server are deleted too.</p>
 
 <h2>What we keep</h2>
-<p>For bookkeeping and abuse prevention, we keep the accounting figures with your identity removed. What remains <strong>does not include your email, account ID, questions or answers</strong>, and can no longer be linked to you:</p>
 <ul>
-<li>Usage ledger: date, which AI model, usage figures (such as token counts) and amount charged. If a request was still waiting for the AI provider’s bill to be checked, the provider’s request ID is kept, only to check the cost.</li>
-<li>Balance ledger: date, source of the change (such as a code, timing or import) and how many minutes or credits were added or used.</li>
-<li>Used redemption codes: a “this code has been used” marker so it cannot be redeemed again, no longer linked to you.</li>
-<li>Service statistics: daily totals of users, time and usage, which never contained personal information.</li>
-</ul>
-<p>These de-identified records are kept long term.</p>
-<p>Two other kinds of records are not in our database and are deleted automatically under their own rules after your account is deleted:</p>
-<ul>
-<li>Server access logs (which may include IP addresses and account IDs): recorded by Supabase and deleted automatically, normally within 7 days.</li>
-<li>Sending records at our email provider Resend (including your email address): kept for a period, then deleted automatically under Resend’s rules.</li>
-</ul>
-
-<h2>Data not on our server</h2>
-<ul>
-<li><strong>The question bank and practice history on your phone</strong> stay on your phone. Deleting your account does not remove them automatically; uninstall the app or clear MeowQuiz’s app data in system settings to delete them.</li>
-<li><strong>AI providers</strong> (Anthropic, OpenAI) receive question content without your email or account ID, and keep and delete it under their own data policies.</li>
-<li><strong>Google Play orders</strong> are kept by Google and handled under Google’s rules.</li>
+<li>Accounting records and statistics without your email or account ID (such as how much was used and charged on a given day), kept long term for bookkeeping and abuse prevention.</li>
+<li>Server access logs (may include IP addresses and account IDs) are normally deleted automatically within 7 days; our email provider’s sending records are deleted under its rules.</li>
+<li>The question bank and practice history on your phone are not deleted automatically; uninstall the app or clear its data to remove them.</li>
 </ul>
 
 <p>See our <a href="privacy.html#en">Privacy Policy</a> for more. Questions: <a href="mailto:meowquizofficial@gmail.com">meowquizofficial@gmail.com</a>.</p>

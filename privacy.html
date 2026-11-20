@@ -39,114 +39,71 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 <h1>喵喵刷题 / MeowQuiz 隐私政策</h1>
 <p class="muted">生效日期：2026 年 11 月 20 日<br>运营方：Meow_Studio<br>联系邮箱：<a href="mailto:meowquizofficial@gmail.com">meowquizofficial@gmail.com</a></p>
 
-<p>这份政策说明喵喵刷题 App（Android，包名 com.meowquiz.app）会拿到你的哪些信息、拿来做什么、存在哪里、存多久，以及你怎么删除它们。</p>
+<p>这份政策说明喵喵刷题 App（Android）会收集哪些信息、拿来做什么、交给谁、存多久，以及怎么删除。</p>
 
 <div class="box">
-<p><strong>先说最要紧的几点</strong></p>
 <ul>
-<li>你的题库和做题记录存在你自己的手机里，不上传。</li>
-<li>只有在你选择用 AI 解题或用 AI 整理导入时，题目内容才会发到我们的服务器，再转给 AI 服务商。服务器不保存你发出的题目原文和截图；AI 返回的结果（导入整理的结果里有题目原文）在服务器上暂存 15 分钟后清空。</li>
-<li>无障碍权限只用来读你正在做的那道题：你点“开始”后才读，不读密码框里的文字，也不会替你点击或输入。</li>
-<li>我们不卖你的数据，不放广告。App 里没有广告和统计 SDK，也没有崩溃上报；只有手机上做文字识别的 Google ML Kit 会向 Google 发送诊断和使用统计（不含截图和识别出的文字），见第 2 节。</li>
-<li>你可以随时在 App 里删除账号，也可以发邮件让我们删。</li>
+<li>题库和做题记录只存在你手机里，不上传。</li>
+<li>只有你用 AI 解题或 AI 整理导入时，题目内容才会发到我们的服务器和 AI 服务商。</li>
+<li>无障碍权限只在你点“开始”后读取当前的题目。</li>
+<li>我们不卖你的数据，不放广告。</li>
+<li>你随时可以删除账号。</li>
 </ul>
 </div>
 
-<h2>1. 我们会处理哪些信息</h2>
-
-<h3>账号</h3>
-<p>注册需要邮箱和密码，昵称可以不填；登录可以用密码，也可以用发到邮箱的验证码。密码由登录服务 Supabase Auth 保存，存的是加密散列，不是原文。删除账号时你要再输一次密码：App 会通过加密连接把它发给我们的服务器，服务器只用它向 Supabase Auth 核对是不是你本人，不保存、不写进日志。登录、改密码和退出时会产生登录记录（会话和登录日志）。这些信息用来确认是你本人、保存你的余额。注册、登录验证码和找回密码的邮件由邮件服务商 Resend 代我们发到你的邮箱。</p>
-
-<h3>屏幕取题（无障碍权限）</h3>
-<ul>
-<li>打开无障碍权限后，App 不会自己开始读。只有你打开悬浮窗并点“开始”，App 才读取你正在使用的那个 App 当前屏幕上的题目文字。不读喵喵刷题自己的界面、悬浮窗和通知，不读密码框里的文字。</li>
-<li>题目带图片、或屏幕上的文字读不全时，App 会截一张当前整个屏幕的画面（屏幕上正好显示的其他内容也会在里面），在手机上用 Google ML Kit 识别文字。截图只在内存里短暂保留，不存进相册或手机存储。</li>
-<li>你的题库里查不到答案时，App 会把题目文字发给云端 AI；打开了“附图问 AI”时，还会附上这张截图（见下一节）。</li>
-<li>App 只读取，不会替你点击、输入或做其他操作。</li>
-<li>你可以随时点“暂停”，或在系统设置里关掉无障碍权限。</li>
-</ul>
-
-<h3>问 AI 时发出的内容</h3>
-<p>解题方式选“题库 + AI”时，题库里找不到答案，App 会自动问 AI；你也可以自己点“问 AI”。选“仅题库”时，题目不会发出去。问 AI 时，App 会把下面这些发到我们的服务器，再转给 AI 服务商：</p>
-<ul>
-<li>题目文字、选项和题型；</li>
-<li>你题库里最多 3 道相似题和它们的答案（帮 AI 参考）；</li>
-<li>题目带图、而且你打开了“附图问 AI”时，还有一张当前页面的截图，也就是你正在做题的那个 App 的画面（这个开关默认关闭）。</li>
-</ul>
-<p>同一个请求里还有 App 版本号和系统平台，只给我们的服务器用来排查问题，不转给 AI 服务商。</p>
-<p>我们的服务器不保存你发出的题目文字和截图，只保存一个由内容算出来、不能还原内容的校验值，用来防止重复扣费。AI 给出的答案在服务器上暂存 15 分钟（网络断了时可以重新取回），之后清空；你手机上会留一份。</p>
-
-<h3>用 AI 整理导入的文件</h3>
-<p>导入文件时，原文件不上传，我们的服务器上也不会有它。App 先在手机上把文件拆成文字和页面图片，你确认要用 AI 整理后，才分段发到服务器、再转给 AI 服务商，整理成题目。服务器不保存发出去的文字和图片。整理结果里有题目、选项、答案和解析的原文，在服务器上暂存 15 分钟（网络断了时可以重新取回）后清空；整理好的题库只存在你手机上。</p>
-
-<h3>余额和用量</h3>
-<p>为了计费，我们会记录：分钟余额、导入积分、兑换码的使用、计时的起止时间和时长（包括取题实际在运行的秒数），以及每次 AI 请求的编号、时间、所用模型、用量数字、扣了多少和是否出错。这些记录不含题目内容。</p>
-
-<h3>通过 Google Play 购买</h3>
-<p>App 接入 Google Play 购买后，付款由 Google 完成。我们只接收 Google 提供的订单信息（例如商品、订单号、购买凭据、购买时间、付款和退款状态），用来核对订单、给你的账号加上分钟或导入积分、处理退款和对账。我们拿不到你的银行卡或其他付款方式的信息。</p>
-
-<h3>你联系我们时</h3>
-<p>你发邮件给我们时，我们会收到你的邮箱地址和邮件内容，用来回复你、处理你的请求。</p>
-
-<h3>只存在你手机上的内容</h3>
-<p>题库、导入过的资料、做题记录、AI 答案的本机缓存和 App 运行日志都存在你手机上，不上传。卸载 App 或在系统设置里清除应用数据，就会删除它们。</p>
-
-<h3>App 用到的权限</h3>
-<ul>
-<li>无障碍服务：读当前题目，见上文。</li>
-<li>显示在其他应用上层：只用来在你开权限时，在系统设置页面上显示引导小提示。</li>
-<li>通知：显示导入进度和悬浮窗正在运行的提示。</li>
-<li>网络：登录、查询余额、问 AI 和整理导入。</li>
-</ul>
-
-<h2>2. 谁会帮我们处理这些信息</h2>
-<p>我们不把你的信息卖给任何人。为了让 App 能用，下面这些服务商会按我们的要求处理一部分信息：</p>
+<h2>1. 我们收集什么、用来干什么</h2>
 <dl>
-<dt>Supabase（服务器、账号登录）</dt>
-<dd>账号、余额、用量记录都存在 Supabase，服务器位于新加坡。<a href="https://supabase.com/privacy">Supabase 隐私政策</a></dd>
-<dt>Anthropic（AI 解题和整理导入，默认使用）</dt>
-<dd>收到题目内容、题库参考、你允许时的题目截图，或导入文件的文字和图片。我们不会把你的邮箱或账号编号发给它。<a href="https://www.anthropic.com/legal/privacy">Anthropic 隐私政策</a></dd>
-<dt>OpenAI（AI 解题和整理导入，备用或切换时使用）</dt>
-<dd>当我们把某项功能切换到 OpenAI，或默认服务暂时不可用而改用它时，收到的内容同上。<a href="https://openai.com/policies/privacy-policy/">OpenAI 隐私政策</a></dd>
-<dt>Resend（发送登录邮件）</dt>
-<dd>代我们发送注册、登录验证码和找回密码的邮件，会收到你的邮箱和邮件内容（例如验证码），并保存发送记录（含收件邮箱）一段时间，按 Resend 的规则自动删除。<a href="https://resend.com/legal/privacy-policy">Resend 隐私政策</a></dd>
-<dt>Google</dt>
-<dd>App 用 Google ML Kit（打包在 App 里的中文文字识别）在手机上识别截图里的文字，截图和识别出的文字都在手机上处理。按 Google 的 <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit 数据披露</a>，ML Kit 会通过加密连接向 Google 发送诊断和使用统计：设备信息（例如厂商、型号、系统版本）、App 包名和版本、一个按安装生成、不用来识别你本人或设备的标识、性能数据（例如耗时）、调用设置（例如图片格式和分辨率）、输入输出的大小、功能版本、事件类型和错误码。Google 说明不会把这些数据转给第三方。通过 Google Play 购买时，付款由 Google 处理。<a href="https://policies.google.com/privacy">Google 隐私政策</a></dd>
+<dt>账号</dt>
+<dd>邮箱、密码、昵称（可不填）和登录记录，用来登录和保存你的余额。密码只以加密散列保存。删除账号时要再输一次密码，它只用来核对是你本人，不保存、不记录。</dd>
+<dt>屏幕上的题目（无障碍权限）</dt>
+<dd>打开权限后 App 不会自动读。你打开悬浮窗、点“开始”后，App 才读取当前屏幕上的题目文字；不读密码框里的文字，也不会替你点击或输入。题目有图或文字读不全时，App 会截取整个屏幕（屏幕上的其他内容也会在里面），在手机上识别文字；截图只在内存里短暂保留，不保存。你随时可以点“暂停”，或在系统设置里关掉权限。</dd>
+<dt>问 AI 的内容</dt>
+<dd>解题方式选“题库 + AI”时，题库里查不到答案，或你点“问 AI”时，App 会把题目文字、选项和你题库里最多 3 道相似题发给 AI；打开“附图问 AI”（默认关闭）时附上截图。选“仅题库”就不发。服务器不保存这些内容，AI 的答案暂存 15 分钟后清空。</dd>
+<dt>AI 整理导入</dt>
+<dd>原文件不上传。你确认后，App 把在手机上拆出来的文字和图片分段发给 AI 整理。整理结果（含题目原文）在服务器上暂存 15 分钟后清空，整理好的题库只存在你手机上。</dd>
+<dt>余额和用量</dt>
+<dd>分钟余额、导入积分、兑换和计时记录，以及每次 AI 请求的用量和扣费，用来计费。这些记录不含题目内容。</dd>
+<dt>Google Play 购买（接入后）</dt>
+<dd>只接收 Google 提供的订单信息，用来到账、退款和对账。我们拿不到你的银行卡等付款信息。</dd>
+<dt>你发来的邮件</dt>
+<dd>用来回复你、处理你的请求。</dd>
 </dl>
-<p>AI 服务商和 Resend 可能在新加坡以外（例如美国）处理信息。法律要求我们提供信息时，我们会依法配合。</p>
+<p>App 用到的权限：无障碍（读题）、显示在其他应用上层（只用于开权限时的引导提示）、通知（导入进度和悬浮窗运行提示）、网络。</p>
 
-<h2>3. 信息存多久</h2>
+<h2>2. 交给谁处理</h2>
+<p>我们不卖你的信息。下面这些服务商替我们处理一部分信息：</p>
 <ul>
-<li>账号信息（邮箱、密码的加密散列、昵称、登录会话和登录服务数据库里的登录记录）：账号存在期间保存，删除账号时一并删除。</li>
-<li>你发出的题目文字、题库参考、截图，导入时发出的文字和图片：服务器不保存。原文件从不上传。</li>
-<li>AI 答案和导入整理结果（整理结果含题目原文）：服务器上暂存 15 分钟后清空。</li>
-<li>每次 AI 请求的用量记录：通常 90 天后合并成按天的汇总（按日期、模型和计价版本分组）。如果某次请求还在等 AI 服务商的账单核对，这条明细会保留到核对完成再合并。</li>
-<li>余额、兑换、计时记录和每天的用量汇总：账号存在期间保存，删除账号时删除。</li>
-<li>删除账号后留下的记录：只留下不含你邮箱和账号编号的账务记录，长期保存，用来对账和防止滥用，详见<a href="delete-account.html">删除账号说明</a>。</li>
-<li>运营统计：按天汇总的人数、时长和用量，不含任何个人信息，长期保存。</li>
-<li>Google Play 订单记录（接入购买后）：在对账、退款和处理纠纷需要的期间保存。</li>
-<li>服务器访问日志（可能包含 IP 地址和账号编号）：由 Supabase 平台记录，一般保存不超过 7 天后自动删除，删除账号时不会提前删除。</li>
-<li>邮件服务商 Resend 的发送记录（含你的邮箱）：保存一段时间后，按 Resend 的规则自动删除。</li>
-<li>AI 服务商收到的内容：不带你的邮箱和账号编号，按它们各自的 API 数据政策保存和删除。</li>
-<li>你发来的邮件：保存到问题处理完；你可以要求我们删除。</li>
+<li><strong>Supabase</strong>：存账号、余额和用量记录，服务器在新加坡。<a href="https://supabase.com/privacy">隐私政策</a></li>
+<li><strong>OpenAI（默认）和 Anthropic（备用，OpenAI 连不上时使用）</strong>：AI 解题和整理导入时，收到题目内容（你允许时含截图），收不到你的邮箱或账号编号。<a href="https://openai.com/policies/privacy-policy/">OpenAI 隐私政策</a> · <a href="https://www.anthropic.com/legal/privacy">Anthropic 隐私政策</a></li>
+<li><strong>Resend</strong>：发送登录验证码等邮件，会收到你的邮箱，发送记录按它的规则自动删除。<a href="https://resend.com/legal/privacy-policy">隐私政策</a></li>
+<li><strong>Google</strong>：App 在手机上用 Google ML Kit 识别截图文字，截图不上传；ML Kit 会向 Google 发送不含个人身份的诊断统计（<a href="https://developers.google.com/ml-kit/android-data-disclosure">说明</a>）。通过 Google Play 购买时由 Google 处理付款。<a href="https://policies.google.com/privacy">隐私政策</a></li>
+</ul>
+<p>这些服务商可能在新加坡以外（例如美国）处理信息。法律要求时，我们会依法提供信息。</p>
+
+<h2>3. 存多久</h2>
+<ul>
+<li>账号和登录记录：账号存在期间保存，删除账号时删除。</li>
+<li>发给 AI 的题目和截图：服务器不保存。AI 答案和整理结果：暂存 15 分钟。</li>
+<li>每次请求的用量明细：通常 90 天后合并成按天汇总；还没和 AI 服务商对完账的，保留到对账完成。</li>
+<li>余额、兑换、计时记录和用量汇总：账号存在期间保存。</li>
+<li>删除账号后：只留下不含邮箱和账号编号的账务记录和统计，长期保存，用于对账和防止滥用。</li>
+<li>服务器访问日志（可能含 IP 地址和账号编号）：一般不超过 7 天自动删除，删除账号时不会提前删除。</li>
+<li>Google Play 订单记录（接入后）：保存到对账、退款和处理纠纷不再需要为止。</li>
+<li>服务商那边的记录：按各自的规则删除。你的邮件：处理完后可要求我们删除。</li>
 </ul>
 
-<h2>4. 我们怎么保护信息</h2>
-<p>App 和服务器之间的通信都用加密连接（HTTPS）。服务器上的余额和用量只有我们的服务程序能修改；用你的账号登录后，只能看到你自己的数据。AI 服务商的密钥只放在服务器上，不会下发到手机。</p>
+<h2>4. 安全</h2>
+<p>App 和服务器之间都用加密连接（HTTPS）。登录后你只能看到自己的数据。AI 服务的密钥只放在服务器上。</p>
 
 <h2>5. 你可以怎么做</h2>
 <ul>
-<li>解题方式选“仅题库”，题目就不会发去问 AI。</li>
-<li>关掉“附图问 AI”，截图就不会发出去。</li>
-<li>导入时不选 AI 整理，文件内容就不会发出去。</li>
-<li>在系统设置里关掉无障碍权限，App 就读不到其他 App 的内容。</li>
-<li>在 App 里修改昵称和密码。</li>
-<li>删除账号：在 App 里“我的 → 我的账号 → 删除账号”，或者看<a href="delete-account.html">删除账号说明</a>。</li>
-<li>想查看、更正或删除你的信息，或者对这份政策有疑问，发邮件到 <a href="mailto:meowquizofficial@gmail.com">meowquizofficial@gmail.com</a>。我们会在 7 天内回复。</li>
+<li>选“仅题库”，题目就不发给 AI；关掉“附图问 AI”，截图就不发；导入时不选 AI 整理，文件内容就不发；关掉无障碍权限，App 就读不到屏幕。</li>
+<li>删除账号：App 里“我的 → 我的账号 → 删除账号”，或看<a href="delete-account.html">删除账号说明</a>。</li>
+<li>想查看、更正或删除你的信息，或有疑问，发邮件到 <a href="mailto:meowquizofficial@gmail.com">meowquizofficial@gmail.com</a>，我们 7 天内回复。</li>
 </ul>
 
 <h2>6. 政策更新</h2>
-<p>政策有变化时，我们会更新这个页面和上面的生效日期；改动较大时，会提前在这个页面说明。</p>
+<p>政策有变化时，我们会更新这个页面和生效日期；改动较大时，会提前在这个页面说明。</p>
 </article>
 
 <hr class="sep">
@@ -155,114 +112,71 @@ footer{margin-top:40px;font-size:.95rem;color:var(--muted)}
 <h1>MeowQuiz Privacy Policy</h1>
 <p class="muted">Effective date: 20 November 2026<br>Operator: Meow_Studio<br>Contact: <a href="mailto:meowquizofficial@gmail.com">meowquizofficial@gmail.com</a></p>
 
-<p>This policy explains what information the MeowQuiz app (喵喵刷题, Android, package com.meowquiz.app) handles, why, where it is stored, how long we keep it, and how you can delete it.</p>
+<p>This policy explains what information the MeowQuiz app (喵喵刷题, Android) collects, why, who processes it, how long we keep it, and how to delete it.</p>
 
 <div class="box">
-<p><strong>The short version</strong></p>
 <ul>
-<li>Your question bank and practice history stay on your phone. They are not uploaded.</li>
-<li>Question content reaches our server, and then an AI provider, only when you choose to ask AI or to sort an import with AI. Our server does not keep the question text or screenshots you send. Results from AI (import results include the original question text) are held on our server for 15 minutes and then cleared.</li>
-<li>The accessibility permission is used only to read the question you are working on: only after you tap “Start”, never the text in password fields, and the app never taps or types for you.</li>
-<li>We do not sell your data and show no ads. The app has no ad or analytics SDKs and no crash reporting. The only exception is Google ML Kit, which recognises text on your phone and sends diagnostic and usage statistics to Google (not your screenshots or the recognised text); see section 2.</li>
-<li>You can delete your account in the app at any time, or ask us by email.</li>
+<li>Your question bank and practice history stay on your phone.</li>
+<li>Question content reaches our server and AI providers only when you ask AI or sort an import with AI.</li>
+<li>The accessibility permission reads the current question only after you tap “Start”.</li>
+<li>We do not sell your data and show no ads.</li>
+<li>You can delete your account at any time.</li>
 </ul>
 </div>
 
-<h2>1. Information we handle</h2>
-
-<h3>Your account</h3>
-<p>To sign up you need an email address and a password; a nickname is optional. You can sign in with your password or with a code sent to your email. Your password is stored by our sign-in service, Supabase Auth, as an encrypted hash, not as the password itself. To delete your account you enter your password again: the app sends it over an encrypted connection to our server, which uses it only to check with Supabase Auth that it is you. It is not stored or logged. Signing in, changing your password and signing out create login records (sessions and login logs). We use this to confirm it is you and to keep your balance. Sign-up, sign-in code and password reset emails are sent to your address for us by the email provider Resend.</p>
-
-<h3>Reading questions on screen (accessibility permission)</h3>
-<ul>
-<li>Turning on the accessibility permission does not start reading by itself. Only after you open the floating panel and tap “Start” (开始) does the app read the question text on the current screen of the app you are using. It does not read MeowQuiz’s own screens, its floating panel, notifications, or the text in password fields.</li>
-<li>If the question has a picture or the screen text is incomplete, the app takes a screenshot of the whole current screen (anything else shown on screen at that moment is included) and recognises the text on your phone with Google ML Kit. The screenshot is held briefly in memory only and is not saved to your gallery or storage.</li>
-<li>If your bank has no answer, the app sends the question text to AI in the cloud, together with the screenshot if you have turned on “Attach image when asking AI” (see the next section).</li>
-<li>The app only reads. It never taps, types or does anything else for you.</li>
-<li>You can tap “Pause” (暂停) at any time, or turn the accessibility permission off in system settings.</li>
-</ul>
-
-<h3>What is sent when you ask AI</h3>
-<p>If your answer mode is “Bank + AI” (题库 + AI), the app asks AI automatically when your bank has no answer; you can also tap “Ask AI” (问 AI) yourself. In “Bank only” (仅题库) mode, questions are not sent. When asking AI, the app sends the following to our server, which passes it to an AI provider:</p>
-<ul>
-<li>the question text, options and question type;</li>
-<li>up to 3 similar questions from your bank with their answers, as hints;</li>
-<li>if the question has a picture and you have turned on “Attach image when asking AI” (附图问 AI), a screenshot of the current page, that is, the screen of the app you are answering in (this setting is off by default).</li>
-</ul>
-<p>The same request also carries the app version and platform. Only our server uses these, to troubleshoot; they are not passed to the AI provider.</p>
-<p>Our server does not store the question text or screenshots you send. It stores only a checksum calculated from the content, which cannot be turned back into the content, to avoid charging twice. The AI answer is held on our server for 15 minutes (so it can be fetched again if your connection drops) and then cleared; a copy stays on your phone.</p>
-
-<h3>Sorting an imported file with AI</h3>
-<p>The original file is never uploaded and never stored on our server. The app first splits it into text and page images on your phone. Only after you confirm AI sorting are the pieces sent to our server and then to an AI provider to turn them into questions. Our server does not keep the text and images it receives. The result contains the original text of the questions, options, answers and explanations; it is held on our server for 15 minutes (so it can be fetched again if your connection drops) and then cleared. The finished bank is stored only on your phone.</p>
-
-<h3>Balance and usage</h3>
-<p>For billing we record your minute balance, import credits, redeemed codes, start and end times and length of timed sessions (including how many seconds question reading was actually running), and for each AI request its ID, time, model, usage figures, amount charged and any error. These records contain no question content.</p>
-
-<h3>Purchases through Google Play</h3>
-<p>Once in-app purchases through Google Play are available, payment is handled by Google. We only receive the order information Google provides (such as product, order ID, purchase token, purchase time, payment and refund status) to verify orders, add minutes or import credits to your account, handle refunds and keep accounts. We never receive your card or other payment details.</p>
-
-<h3>When you contact us</h3>
-<p>When you email us we receive your email address and message, and use them to reply and handle your request.</p>
-
-<h3>What stays only on your phone</h3>
-<p>Your question bank, imported material, practice history, cached AI answers and app logs stay on your phone and are not uploaded. Uninstalling the app or clearing its data in system settings deletes them.</p>
-
-<h3>Permissions the app uses</h3>
-<ul>
-<li>Accessibility service: to read the current question, as described above.</li>
-<li>Display over other apps: only to show a small guide tip on the system settings screens while you turn permissions on.</li>
-<li>Notifications: to show import progress and that the floating panel is running.</li>
-<li>Network: to sign in, check your balance, ask AI and sort imports.</li>
-</ul>
-
-<h2>2. Who helps us process information</h2>
-<p>We do not sell your information. To make the app work, these providers process some information on our behalf:</p>
+<h2>1. What we collect and why</h2>
 <dl>
-<dt>Supabase (server and sign-in)</dt>
-<dd>Your account, balance and usage records are stored with Supabase, on servers in Singapore. <a href="https://supabase.com/privacy">Supabase Privacy Policy</a></dd>
-<dt>Anthropic (AI answers and import sorting, used by default)</dt>
-<dd>Receives question content, bank hints, question screenshots when you allow them, or the text and images of an imported file. We do not send it your email address or account ID. <a href="https://www.anthropic.com/legal/privacy">Anthropic Privacy Policy</a></dd>
-<dt>OpenAI (AI answers and import sorting, as a backup or when we switch)</dt>
-<dd>Receives the same kind of content when we switch a feature to OpenAI, or when the default provider is temporarily unavailable. <a href="https://openai.com/policies/privacy-policy/">OpenAI Privacy Policy</a></dd>
-<dt>Resend (sign-in emails)</dt>
-<dd>Sends sign-up, sign-in code and password reset emails for us. It receives your email address and the email content (such as a code), and keeps a sending record (including the recipient address) for a period before deleting it automatically under Resend’s rules. <a href="https://resend.com/legal/privacy-policy">Resend Privacy Policy</a></dd>
-<dt>Google</dt>
-<dd>The app uses Google ML Kit (Chinese text recognition bundled in the app) to recognise text in screenshots on your phone; screenshots and recognised text are processed on your phone. According to Google’s <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>, ML Kit sends diagnostic and usage statistics to Google over an encrypted connection: device information (such as manufacturer, model and OS version), the app’s package name and version, a per-installation identifier that is not meant to identify you or your device, performance data (such as latency), API settings (such as image format and resolution), input and output sizes, feature version, event types and error codes. Google states it does not pass this data to third parties. Purchases through Google Play are paid to Google. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></dd>
+<dt>Account</dt>
+<dd>Email, password, an optional nickname and login records, so you can sign in and keep your balance. Your password is stored only as an encrypted hash. When you delete your account you enter it again; it is used only to confirm it is you, and is not stored or logged.</dd>
+<dt>Questions on screen (accessibility permission)</dt>
+<dd>Turning the permission on does not start reading. Only after you open the floating panel and tap “Start” (开始) does the app read the question text on the current screen. It never reads the text in password fields and never taps or types for you. If a question has a picture or the text is incomplete, the app takes a screenshot of the whole screen (anything else on screen is included) and recognises the text on your phone. The screenshot is held briefly in memory and not saved. You can tap “Pause” (暂停) at any time or turn the permission off in system settings.</dd>
+<dt>What is sent to AI</dt>
+<dd>In “Bank + AI” (题库 + AI) mode, when your bank has no answer or you tap “Ask AI”, the app sends the question text, options and up to 3 similar questions from your bank to AI, plus the screenshot if “Attach image when asking AI” (附图问 AI, off by default) is on. In “Bank only” (仅题库) mode nothing is sent. Our server does not store this content, and holds the AI answer for 15 minutes before clearing it.</dd>
+<dt>AI import sorting</dt>
+<dd>The original file is never uploaded. After you confirm, the app sends the text and images it extracted on your phone to AI in pieces. The result (which includes the question text) is held on our server for 15 minutes and then cleared; the finished bank stays only on your phone.</dd>
+<dt>Balance and usage</dt>
+<dd>Minute balance, import credits, redemption and timing records, and the usage and charge of each AI request, for billing. These contain no question content.</dd>
+<dt>Google Play purchases (once available)</dt>
+<dd>We receive only the order information Google provides, to credit your account, handle refunds and keep accounts. We never see your card or other payment details.</dd>
+<dt>Emails you send us</dt>
+<dd>Used to reply and handle your request.</dd>
 </dl>
-<p>AI providers and Resend may process information outside Singapore, for example in the United States. We will disclose information where the law requires it.</p>
+<p>Permissions: accessibility (reading questions), display over other apps (only for the setup guide tip), notifications (import progress, floating panel running), network.</p>
 
-<h2>3. How long we keep information</h2>
+<h2>2. Who processes it</h2>
+<p>We do not sell your information. These providers process some of it for us:</p>
 <ul>
-<li>Account details (email, password hash, nickname, login sessions and the sign-in records in the sign-in service database): while your account exists; all deleted when you delete your account.</li>
-<li>Question text, bank hints and screenshots you send, and the text and images sent for import: not stored on our server. Original files are never uploaded.</li>
-<li>AI answers and import results (import results include the original question text): held on our server for 15 minutes, then cleared.</li>
-<li>Per-request AI usage records: normally merged into daily summaries (grouped by date, model and pricing version) after 90 days. A request still waiting for the AI provider’s bill to be checked is kept in detail until that check is done, then merged.</li>
-<li>Balance, redemption and timing records, and daily usage summaries: while your account exists; deleted when you delete your account.</li>
-<li>Records left after account deletion: only accounting records without your email or account ID, kept long term for bookkeeping and abuse prevention. See <a href="delete-account.html#en">Delete your account</a>.</li>
-<li>Service statistics: daily totals of users, time and usage with no personal information, kept long term.</li>
-<li>Google Play order records (once purchases are available): kept as long as needed for bookkeeping, refunds and disputes.</li>
-<li>Server access logs (which may include IP addresses and account IDs): recorded by Supabase and deleted automatically, normally within 7 days; deleting your account does not remove them sooner.</li>
-<li>Sending records at our email provider Resend (including your email address): kept for a period, then deleted automatically under Resend’s rules.</li>
-<li>Content received by AI providers: carries no email address or account ID, and is kept and deleted under their own API data policies.</li>
-<li>Emails you send us: kept until your request is handled; you can ask us to delete them.</li>
+<li><strong>Supabase</strong>: stores your account, balance and usage records, on servers in Singapore. <a href="https://supabase.com/privacy">Privacy policy</a></li>
+<li><strong>OpenAI (default) and Anthropic (backup, used when OpenAI cannot be reached)</strong>: receive question content (with screenshots if you allow) for AI answers and import sorting, but not your email or account ID. <a href="https://openai.com/policies/privacy-policy/">OpenAI privacy policy</a> · <a href="https://www.anthropic.com/legal/privacy">Anthropic privacy policy</a></li>
+<li><strong>Resend</strong>: sends sign-in code and other account emails, so it receives your email address; its sending records are deleted automatically under its rules. <a href="https://resend.com/legal/privacy-policy">Privacy policy</a></li>
+<li><strong>Google</strong>: the app uses Google ML Kit to recognise text in screenshots on your phone, and screenshots are not uploaded; ML Kit sends Google diagnostic statistics that do not identify you (<a href="https://developers.google.com/ml-kit/android-data-disclosure">details</a>). Google handles payment for Google Play purchases. <a href="https://policies.google.com/privacy">Privacy policy</a></li>
+</ul>
+<p>These providers may process information outside Singapore, for example in the United States. We disclose information where the law requires it.</p>
+
+<h2>3. How long we keep it</h2>
+<ul>
+<li>Account and login records: while your account exists; deleted when you delete it.</li>
+<li>Questions and screenshots sent to AI: not stored on our server. AI answers and import results: held for 15 minutes.</li>
+<li>Per-request usage details: normally merged into daily summaries after 90 days; requests not yet reconciled with the AI provider’s bill are kept until that is done.</li>
+<li>Balance, redemption and timing records, and usage summaries: while your account exists.</li>
+<li>After account deletion: only accounting records and statistics without your email or account ID, kept long term for bookkeeping and abuse prevention.</li>
+<li>Server access logs (may include IP addresses and account IDs): normally deleted automatically within 7 days; deleting your account does not remove them sooner.</li>
+<li>Google Play order records (once available): until no longer needed for bookkeeping, refunds and disputes.</li>
+<li>Records at our providers: deleted under their own rules. Your emails: you can ask us to delete them once handled.</li>
 </ul>
 
-<h2>4. How we protect information</h2>
-<p>All traffic between the app and our server is encrypted (HTTPS). Only our server code can change balances and usage records; when signed in, you can see only your own data. AI provider keys stay on the server and never reach your phone.</p>
+<h2>4. Security</h2>
+<p>All traffic between the app and our server is encrypted (HTTPS). When signed in you can see only your own data. AI service keys stay on the server.</p>
 
 <h2>5. Your choices</h2>
 <ul>
-<li>Choose “Bank only” (仅题库) as the answer mode so questions are not sent to AI.</li>
-<li>Turn off “Attach image when asking AI” so screenshots are not sent.</li>
-<li>Skip AI sorting when importing so file content is not sent.</li>
-<li>Turn off the accessibility permission so the app cannot read other apps.</li>
-<li>Change your nickname and password in the app.</li>
+<li>Use “Bank only” so questions are not sent to AI; turn off “Attach image when asking AI” so screenshots are not sent; skip AI sorting so file content is not sent; turn off the accessibility permission so the app cannot read the screen.</li>
 <li>Delete your account in the app under “Me → My account → Delete account” (我的 → 我的账号 → 删除账号), or see <a href="delete-account.html#en">Delete your account</a>.</li>
-<li>To see, correct or delete your information, or ask about this policy, email <a href="mailto:meowquizofficial@gmail.com">meowquizofficial@gmail.com</a>. We reply within 7 days.</li>
+<li>To see, correct or delete your information, or ask a question, email <a href="mailto:meowquizofficial@gmail.com">meowquizofficial@gmail.com</a>. We reply within 7 days.</li>
 </ul>
 
 <h2>6. Changes</h2>
-<p>When this policy changes we will update this page and the effective date above. For significant changes we will say so on this page in advance.</p>
+<p>When this policy changes we update this page and the effective date. For significant changes we will say so on this page in advance.</p>
 </article>
 
 <footer><a href="#zh">回到顶部 Back to top</a> · <a href="delete-account.html">删除账号 Delete account</a></footer>
